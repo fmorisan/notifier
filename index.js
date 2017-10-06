@@ -78,4 +78,10 @@ setInterval(() => {
     }, rejected => {})
 }, UPDATE_INTERVAL)
 
+/* Create server so that now can stop polling us for ports */
+require('http').createServer(
+    (req, res) => res.end("OK")
+).listen(80)
+
 bot.startPolling()
+
