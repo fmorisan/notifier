@@ -4,7 +4,7 @@ const crypto = require('crypto')
 var { getClassifieds } = require('./lookup.js')
 var msgStore = require('./messageStore.js')
 
-const bot = new Telegraf('319038460:AAHzJZfPM_vNOMBjuTHAVpQ1ndf2y4GWcDc')
+const bot = new Telegraf(process.env.TELEGRAM_TOKEN)
 const UPDATE_INTERVAL = 30*1000
 
 const handleMessage = ctx => {
